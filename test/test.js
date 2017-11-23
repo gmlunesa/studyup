@@ -1,4 +1,4 @@
-const File = require('./models').File;
+const File = require('../models').File;
 var expect  = require('chai').expect;
 var request = require('request');
 
