@@ -17,13 +17,13 @@ describe('Landing Page Test', function() {
 });
 
 
-describe('Profile Page Test', function() {
-    it('Should return a user object', function(){
-        request('http://localhost:3000/profile', function( error, res, body ) {
-            expect( res.statusCode ).to.equal( 200 );
-        });        
-    });
-});
+// describe('Profile Page Test', function() {
+//     it('Should return a user object', function(){
+//         request('http://localhost:3000/profile', function( error, res, body ) {
+//             expect( res.statusCode ).to.equal( 200 );
+//         });        
+//     });
+// });
 
 
 describe ('File Directory Test', function() {
