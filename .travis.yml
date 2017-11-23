@@ -2,7 +2,7 @@ language: javascript
 
 install: true
 
-script: ant -version
+script: ant -version && mocha test/test.js
 
 notifications:
   email:
