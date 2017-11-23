@@ -22,9 +22,9 @@ A webapp we made for our CMSC 126 (Web Engineering) class 22-hour hackathon. The
 
 ## Team
 
-- [Dignos, Ileana Denise](https://github.com/yannHdenise)
-- [Lunesa, Goldy Mariz](https://github.com/gmlunesa/)
-- [Onez, Brettny Loise Jane](https://github.com/sherluck13BCO/)
+- [Dignos, Ileana Denise](https://github.com/yannHdenise | yannahdenise@gmail.com)
+- [Lunesa, Goldy Mariz](https://github.com/gmlunesa/ | gclunesa@up.edu.ph)
+- [Onez, Brettny Loise Jane](https://github.com/sherluck13BCO/ |bconez@up.edu.ph)
 
 
 
