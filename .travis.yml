@@ -14,3 +14,7 @@ notifications:
       - gclunesa@up.edu.ph
     on_success: always # default: change
     on_failure: always # default: always
+    
+  template:
+     - "%{repository} (%{commit}) : %{message} %{foo} "
+     - "Build details: %{build_url}"
