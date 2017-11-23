@@ -20,16 +20,9 @@ describe('Landing Page Test', function() {
 describe('Profile Page Test', function() {
     it('Should return a user object', function(){
         request('http://localhost:3000/profile', function( error, res, body ) {
-            expect( body.user ).to.be.an( 'object' );
+            expect( res.statusCode ).to.equal( 200 );
         });        
     });
-
-    it('Should return files', function(){
-        request('http://localhost:3000/profile', function( error, res, body ) {
-            expect( body.files ).to.be.an( 'array' );
-        });        
-    });
-
 });
 
 
