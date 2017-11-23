@@ -2,6 +2,8 @@ language: javascript
 
 install: true
 
+before_script: npm install
+
 script: ant -version && npm test
 
 notifications:
