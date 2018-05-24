@@ -1,0 +1,21 @@
+language: javascript
+
+install: true
+
+before_script: npm install
+
+script: ant -version && npm test
+
+notifications:
+  email:
+    recipients:
+      - bconez@up.edu.ph
+      - yannahdenise.oreo@gmail.com
+      - gclunesa@up.edu.ph
+    on_success: always # default: change
+    on_failure: always # default: always
+    
+  template:
+     - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
+     - "Change view : %{compare_url}"
+     - "Build details : %{build_url}"
