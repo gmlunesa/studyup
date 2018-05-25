@@ -1,7 +1,7 @@
 
 var Study = require('../domain/Study');
 
-describe("Adding Artists", function() {
+describe("Adding Users", function() {
 	var Study = require('../domain/Study');
 	var study;
 
@@ -27,6 +27,8 @@ describe("Adding Files", function() {
 		
 	});
 });
+
+
 
 
 
