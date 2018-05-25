@@ -1,4 +1,3 @@
-
 var Study = require('../domain/Study');
 
 describe("Adding Users", function() {
@@ -16,6 +15,7 @@ describe("Adding Users", function() {
 });
 
 
+
 describe("Adding Files", function() {
 	var study;
 
@@ -23,7 +23,20 @@ describe("Adding Files", function() {
 	it("should add a file for a user", function() {
 		study.addUser('Ileana Denise Dignos', 'im@up.edu.ph');
 		study.addFile('im@up.edu.ph', 'ab.pdf');
- 	 	expect(study.getUser('im@up.edu.ph').files).toEqual( [ Object({ filename: 'ab.pdf' }) ]);
+ 	 	expect(study.getUser('im@up.edu.ph').files).toEqual( [ Object({ filename: 'ab.pdf', comments: []}) ]);
+		
+	});
+});
+
+describe("Adding Comments", function() {
+	var study;
+
+  	study = new Study();
+	it("should add a comment for a user", function() {
+		study.addUser('Kim Zaldua', 'kz@up.edu.ph');
+		study.addFile('kz@up.edu.ph', 'cd.pdf');
+		study.addComment('kz@up.edu.ph', 'How Nice!','cd.pdf');
+ 	 	expect(study.getFile('kz@up.edu.ph','cd.pdf').comments).toEqual( [ Object({ username: 'kz@up.edu.ph', comment: 'How Nice!' }) ]);
 		
 	});
 });
@@ -37,14 +50,10 @@ describe("Retrieving Elements", function() {
 	study.addFile('im@up.edu.ph', 'abc.pdf');
 	
 	it("should get a user", function() {
- 	 	expect(study.getUser('im@up.edu.ph')).toEqual("Please insert correct answer here");
+ 	 	expect(study.getUser('im@up.edu.ph')).toEqual(Object({ name: 'Ileana Denise Dignos', email: 'im@up.edu.ph', files: [ Object({ filename: 'ab.pdf', comments: [  ] }), Object({ filename: 'abc.pdf', comments: [  ] }) ] }));
 	});
 	
 	it("should get a file", function() {
- 	 	expect(study.getfile('abc.pdf')).toEqual(Object({ filename: 'abc.pdf' }));
+ 	 	expect(study.getFile('im@up.edu.ph','abc.pdf')).toEqual(Object({ filename: 'abc.pdf' ,comments: []}));
 	});
 });
-
-
-
-
