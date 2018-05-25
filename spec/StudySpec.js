@@ -28,6 +28,22 @@ describe("Adding Files", function() {
 	});
 });
 
+describe("Retrieving Elements", function() {
+	var study;
+
+  	study = new Study();
+	study.addUser('Ileana Denise Dignos', 'im@up.edu.ph');
+	study.addFile('im@up.edu.ph', 'ab.pdf');
+	study.addFile('im@up.edu.ph', 'abc.pdf');
+	
+	it("should get a user", function() {
+ 	 	expect(study.getUser('im@up.edu.ph')).toEqual("Please insert correct answer here");
+	});
+	
+	it("should get a file", function() {
+ 	 	expect(study.getfile('abc.pdf')).toEqual(Object({ filename: 'abc.pdf' }));
+	});
+});
 
 
 
